@@ -1,7 +1,24 @@
 import type { NextPage } from "next";
+import countryService from "../services/countryService";
+import type { Country } from "../services/countryService/types";
 import { Content } from "./styles";
 
-const Home: NextPage = () => {
+export async function getServerSideProps() {
+  const countries = await countryService.getAll();
+
+  return {
+    props: {
+      countries,
+    },
+  };
+}
+
+interface CountryPageProps {
+  countries: Country[];
+}
+
+const Home: NextPage<CountryPageProps> = ({ countries }) => {
+  console.log(countries);
   return <Content>Home Page - Countries Listing</Content>;
 };
 
