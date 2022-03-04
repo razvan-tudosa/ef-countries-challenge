@@ -14,6 +14,8 @@ export const enum ThemeType {
   light = "light",
 }
 
+export type Themes = keyof typeof ThemeType;
+
 export type Colors = {
   background: string;
   text: string;

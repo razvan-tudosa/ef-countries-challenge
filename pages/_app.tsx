@@ -1,17 +1,16 @@
 import type { AppProps } from "next/app";
-import { ThemeProvider } from "styled-components";
 import { Layout } from "../components/Layout";
-import { getTheme, ThemeType } from "../config/theme";
+import ThemeManager from "../config/theme/ThemeManager";
 import { GlobalStyles } from "../styles/globalStyles";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={getTheme(ThemeType.dark)}>
+    <ThemeManager>
       <GlobalStyles />
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </ThemeProvider>
+    </ThemeManager>
   );
 }
 

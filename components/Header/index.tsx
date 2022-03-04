@@ -1,6 +1,5 @@
 import { Content, Wrapper } from "./styles";
-
-const ThemePicker: React.FC = () => <div>Theme Picker</div>;
+import { ThemePicker } from "./ThemePicker";
 
 export const Header: React.FC = () => (
   <Wrapper>

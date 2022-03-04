@@ -5,6 +5,7 @@ import {
   ThemeType,
   ColorsContainer,
   Sizes,
+  Themes,
 } from "./types";
 
 const colors: ColorsContainer = {
@@ -22,7 +23,7 @@ const colors: ColorsContainer = {
   },
 };
 
-export const getTheme = (themeType: keyof typeof ThemeType): Theme => {
+export const getTheme = (themeType: Themes): Theme => {
   const theme: Theme = {
     font: {
       family: "Nunito Sans",
