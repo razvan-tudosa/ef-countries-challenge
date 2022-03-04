@@ -1,6 +1,5 @@
 import axios, { AxiosInstance, AxiosStatic } from "axios";
-
-type Country = unknown; // TODO: create a proper type for this
+import type { Country } from "./types";
 
 interface CountryServiceI {
   getAll: () => Promise<Country[]>;
