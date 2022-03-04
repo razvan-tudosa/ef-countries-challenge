@@ -15,5 +15,6 @@ export const GlobalStyles = createGlobalStyle`
   main {
     display: flex;
     justify-content: center;
+    padding-top: 70px; // to compensate for the header that it's fixed
   }
 `;
