@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import countryService from "../services/countryService";
-import type { Country } from "../services/countryService/types";
+import { countryService } from "../services";
+import type { Country } from "../services";
 import { Content } from "./styles";
 
 export async function getServerSideProps() {

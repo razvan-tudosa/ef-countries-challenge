@@ -10,15 +10,16 @@ type CountryName = {
 };
 
 export type Country = {
-  name: CountryName;
-  population: number;
-  region: string;
-  subregion: string;
   capital: string[];
-  tld: string; // Top Level Domain
+  cca2: string;
   currencies: unknown;
   flags: {
     png: string;
     svg: string;
   };
+  name: CountryName;
+  population: number;
+  region: string;
+  subregion: string;
+  tld: string; // Top Level Domain
 };
