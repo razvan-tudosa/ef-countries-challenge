@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
+import { Content } from "./styles";
 
 const Home: NextPage = () => {
-  return <div>Home Page - Countries Listing</div>;
+  return <Content>Home Page - Countries Listing</Content>;
 };
 
 export default Home;
