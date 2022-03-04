@@ -6,6 +6,7 @@ import {
   ColorsContainer,
   Sizes,
   Themes,
+  Radiuses,
 } from "./types";
 
 const colors: ColorsContainer = {
@@ -45,6 +46,15 @@ export const getTheme = (themeType: Themes): Theme => {
       lg: Sizes.lg,
       xl: Sizes.xl,
     },
+    borderRadius: {
+      none: Radiuses.none,
+      sm: Radiuses.sm,
+      normal: Radiuses.normal,
+      md: Radiuses.md,
+      lg: Radiuses.lg,
+      full: Radiuses.full,
+    },
+    shadow: "rgba(0,0,0,0.1) 0px 0px 3px 0px",
   };
 
   return theme;

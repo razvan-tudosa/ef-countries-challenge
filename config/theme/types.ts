@@ -31,7 +31,16 @@ export const enum Sizes {
   xl = "3rem",
 }
 
-export type ColorsContainer = Record<keyof typeof ThemeType, Colors>;
+export const enum Radiuses {
+  none = "0px",
+  sm = "0.125rem" /* 2px */,
+  normal = "0.25rem" /* 4px */,
+  md = "0.375rem" /* 6px */,
+  lg = "0.5rem" /* 8px */,
+  full = "9999px",
+}
+
+export type ColorsContainer = Record<Themes, Colors>;
 
 export type Theme = {
   colors: Colors;
@@ -41,4 +50,6 @@ export type Theme = {
   };
   screens: Record<keyof typeof Screens, Screens>;
   sizes: Record<keyof typeof Sizes, Sizes>;
+  borderRadius: Record<keyof typeof Radiuses, Radiuses>;
+  shadow: string;
 };
