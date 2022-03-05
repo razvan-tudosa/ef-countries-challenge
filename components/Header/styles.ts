@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding: ${({ theme }) => theme.sizes.lg};
+  padding: ${({ theme }) => `${theme.sizes.md} ${theme.sizes.lg}`};
   position: fixed;
   width: 100vw;
 `;
@@ -20,7 +20,7 @@ export const Content = styled.div`
 
   &:first-child {
     font-weight: ${({ theme }) => theme.font.weights.extraBold};
-    font-size: ${({ theme }) => theme.font.sizes.lg};
+    font-size: ${({ theme }) => theme.font.sizes.xl};
   }
 `;
 

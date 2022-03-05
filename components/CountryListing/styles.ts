@@ -25,7 +25,14 @@ export const Info = styled.div`
   padding: ${({ theme }) => theme.sizes.md};
 `;
 
-export const Name = styled.div``;
+export const Name = styled.div`
+  font-weight: ${({ theme }) => theme.font.weights.extraBold};
+  font-size: ${({ theme }) => theme.font.sizes.lg};
+  margin-bottom: ${({ theme }) => theme.sizes.md};
+`;
 export const DataRow = styled.div``;
-export const Label = styled.span``;
+export const Label = styled.span`
+  margin-right: ${({ theme }) => theme.sizes.xs};
+  font-weight: ${({ theme }) => theme.font.weights.semiBold};
+`;
 export const DataValue = styled.span``;
