@@ -1,8 +1,10 @@
-import styled from "styled-components";
+import { HTMLAttributes, HTMLProps, ReactHTMLElement } from "react";
+import styled, { DefaultTheme, StyledComponent } from "styled-components";
 
-interface ButtonProps {
+type ButtonProps = {
   large?: boolean;
-}
+  children: JSX.Element[];
+};
 
 const StyledButton = styled.button<ButtonProps>`
   border: 0;
@@ -24,6 +26,6 @@ const StyledButton = styled.button<ButtonProps>`
     large ? theme.borderRadius.normal : theme.borderRadius.sm};
 `;
 
-export const Button: React.FC<ButtonProps> = ({ children, ...props }) => (
+export const Button = ({ children, ...props }: ButtonProps) => (
   <StyledButton {...props}>{children}</StyledButton>
 );

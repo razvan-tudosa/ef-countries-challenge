@@ -1,8 +1,7 @@
-import type {
-  NextPage,
-  GetServerSidePropsContext,
-  GetServerSideProps,
-} from "next";
+import type { NextPage, GetServerSideProps } from "next";
+import { useRouter } from "next/router";
+import { KeyboardBackspace as BackIcon } from "@styled-icons/material/KeyboardBackspace";
+
 import { countryService } from "../../services";
 import type { Country } from "../../services";
 import { Content } from "../styles";
@@ -50,6 +49,7 @@ type Info = {
 
 const Country: NextPage<CountryPageProps> = ({ country }) => {
   console.log(country);
+  const router = useRouter();
 
   const info: Info = {
     leftSide: [
@@ -77,6 +77,10 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
     ],
   };
 
+  const handleGoBack = () => {
+    router.push("/");
+  };
+
   const renderColInfo = (info: InfoRow[]) =>
     info.map(({ label, value }: InfoRow) => (
       <Item key={value}>
@@ -88,7 +92,9 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
   return (
     <Content>
       <Navigation>
-        <Button large>Back</Button>
+        <Button onClick={handleGoBack} large>
+          <BackIcon size={20} /> Back
+        </Button>
       </Navigation>
       <Info>
         <Flag src={country.flags.png} />
