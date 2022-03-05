@@ -51,16 +51,27 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
 
   const info: Info = {
     leftSide: [
-      { label: "Native Name:", value: "country.name.nativeName.cnr.common" },
+      {
+        label: "Native Name:",
+        value: country.name.nativeName.map((item) => item.common).join(", "),
+      },
       { label: "Population:", value: country.population },
       { label: "Region:", value: country.region },
       { label: "Sub Region:", value: country.subregion },
-      { label: "Capital:", value: 'country.capital.join(", ")' },
+      { label: "Capital:", value: country.capital.join(", ") },
     ],
     rightSide: [
-      { label: "Top Level Domain:", value: country.tld },
-      { label: "Currencies", value: "TBD" },
-      { label: "Languages", value: "TBD" },
+      { label: "Top Level Domain:", value: country.topLevelDomain },
+      {
+        label: "Currencies:",
+        value: country.currencies.map((item) => item.name).join(", "),
+      },
+      {
+        label: "Languages:",
+        value: country.languages
+          .map((item: any) => item?.[item.key])
+          .join(", "),
+      },
     ],
   };
 
@@ -76,7 +87,6 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
 
   return (
     <Content>
-      Country Page - Countries Details - Country Name: {country.name.common}
       <Navigation>
         <button>Back</button>
       </Navigation>
