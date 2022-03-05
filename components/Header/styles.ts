@@ -17,4 +17,9 @@ export const Content = styled.div`
   justify-content: space-between;
   max-width: ${(props) => props.theme.screens.desktop};
   width: 100%;
+
+  &:first-child {
+    font-weight: ${({ theme }) => theme.font.weights.extraBold};
+    font-size: ${({ theme }) => theme.font.sizes.lg};
+  }
 `;
