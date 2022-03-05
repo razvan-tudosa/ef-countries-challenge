@@ -77,12 +77,10 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
 
   const renderColInfo = (info: InfoRow[]) =>
     info.map(({ label, value }: InfoRow) => (
-      <Col key={value}>
-        <Item>
-          <Label>{label}</Label>
-          <span>{value}</span>
-        </Item>
-      </Col>
+      <Item key={value}>
+        <Label>{label}</Label>
+        <span>{value}</span>
+      </Item>
     ));
 
   return (
@@ -95,9 +93,8 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
         <Details>
           <Title>{country.name.common}</Title>
           <Row>
-            {renderColInfo(info.leftSide)}
-            {renderColInfo(info.rightSide)}
-            <Col></Col>
+            <Col>{renderColInfo(info.leftSide)}</Col>
+            <Col>{renderColInfo(info.rightSide)}</Col>
           </Row>
         </Details>
       </Info>
