@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
             key="font-ggl-prec-static"
             rel="preconnect"
             href="https://fonts.gstatic.com"
-            crossOrigin
+            crossOrigin="true"
           />
           <link
             key="font-ggl-asset"
