@@ -1,12 +1,10 @@
-import { HTMLAttributes, HTMLProps, ReactHTMLElement } from "react";
-import styled, { DefaultTheme, StyledComponent } from "styled-components";
+import styled from "styled-components";
 
 type ButtonProps = {
   large?: boolean;
-  children: JSX.Element[];
 };
 
-const StyledButton = styled.button<ButtonProps>`
+export const Button = styled.button<ButtonProps>`
   border: 0;
   cursor: pointer;
 
@@ -25,7 +23,3 @@ const StyledButton = styled.button<ButtonProps>`
   border-radius: ${({ theme, large }) =>
     large ? theme.borderRadius.normal : theme.borderRadius.sm};
 `;
-
-export const Button = ({ children, ...props }: ButtonProps) => (
-  <StyledButton {...props}>{children}</StyledButton>
-);
