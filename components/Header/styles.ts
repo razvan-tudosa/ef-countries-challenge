@@ -23,3 +23,17 @@ export const Content = styled.div`
     font-size: ${({ theme }) => theme.font.sizes.lg};
   }
 `;
+
+export const ToggleThemeButton = styled.button`
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  color: ${({ theme }) => theme.colors.text};
+
+  svg {
+    margin-right: ${({ theme }) => theme.sizes.sm};
+  }
+`;

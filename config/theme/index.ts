@@ -68,3 +68,4 @@ export const getTheme = (themeType: Themes): Theme => {
 };
 
 export { ThemeType };
+export type { Themes };
