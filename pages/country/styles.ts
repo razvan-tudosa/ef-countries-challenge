@@ -43,3 +43,6 @@ export const Label = styled.span`
   font-weight: ${({ theme }) => theme.font.weights.semiBold};
   margin-right: ${({ theme }) => theme.sizes.sm};
 `;
+export const BorderCountries = styled.div`
+  margin-top: ${({ theme }) => theme.sizes.xl};
+`;

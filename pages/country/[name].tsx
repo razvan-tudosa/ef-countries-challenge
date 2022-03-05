@@ -16,6 +16,7 @@ import {
   Label,
   Navigation,
   Title,
+  BorderCountries,
 } from "./styles";
 
 export const getServerSideProps: GetServerSideProps<
@@ -96,6 +97,12 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
             <Col>{renderColInfo(info.leftSide)}</Col>
             <Col>{renderColInfo(info.rightSide)}</Col>
           </Row>
+          <BorderCountries>
+            <Label>Border Countries:</Label>
+            {country.borders.map((item) => (
+              <button key={item.cca2}>{item.name.common}</button>
+            ))}
+          </BorderCountries>
         </Details>
       </Info>
     </Content>
