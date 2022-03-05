@@ -1,5 +1,3 @@
-import { LanguageDimensions } from "@styled-icons/entypo/Language";
-
 type CountryName = {
   common: string;
   official: string;
