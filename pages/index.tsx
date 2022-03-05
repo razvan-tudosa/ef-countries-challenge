@@ -1,9 +1,11 @@
+import { useState } from "react";
 import type { NextPage } from "next";
 import { countryService } from "../services";
 import type { Country } from "../services";
 import { Content } from "./styles";
 import { Filters } from "../components/Filters";
 import { CountryListing } from "../components/CountryListing";
+import FiltersManager from "../components/Filters/FiltersManager";
 
 export async function getServerSideProps() {
   const countries = await countryService.getAll();
@@ -20,11 +22,12 @@ interface CountryPageProps {
 }
 
 const Home: NextPage<CountryPageProps> = ({ countries }) => {
-  console.log(countries);
   return (
     <Content>
-      <Filters />
-      <CountryListing countries={countries} />
+      <FiltersManager>
+        <Filters />
+        <CountryListing countries={countries} />
+      </FiltersManager>
     </Content>
   );
 };
