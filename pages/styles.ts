@@ -4,5 +4,5 @@ export const Content = styled.div`
   width: 100%;
   max-width: ${({ theme }) => theme.screens.desktop};
 
-  padding: ${({ theme }) => theme.sizes.md};
+  padding: 0 ${({ theme }) => theme.sizes.lg};
 `;
