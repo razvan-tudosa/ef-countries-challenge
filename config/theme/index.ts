@@ -57,11 +57,14 @@ export const getTheme = (themeType: Themes): Theme => {
       none: Radiuses.none,
       sm: Radiuses.sm,
       normal: Radiuses.normal,
-      md: Radiuses.md,
       lg: Radiuses.lg,
+      xl: Radiuses.xl,
       full: Radiuses.full,
     },
-    shadow: "rgba(0,0,0,0.1) 0px 0px 3px 0px",
+    shadows: {
+      element: "rgba(0,0,0,0.1) 0px 0px 3px 0px",
+      button: "rgba(0,0,0,0.1) 0px 0px 3px 3px",
+    },
   };
 
   return theme;

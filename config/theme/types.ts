@@ -42,8 +42,8 @@ export const enum Radiuses {
   none = "0px",
   sm = "0.125rem" /* 2px */,
   normal = "0.25rem" /* 4px */,
-  md = "0.375rem" /* 6px */,
-  lg = "0.5rem" /* 8px */,
+  lg = "0.375rem" /* 6px */,
+  xl = "0.5rem" /* 8px */,
   full = "9999px",
 }
 
@@ -59,5 +59,8 @@ export type Theme = {
   screens: Record<keyof typeof Screens, Screens>;
   sizes: Record<keyof typeof Sizes, Sizes>;
   borderRadius: Record<keyof typeof Radiuses, Radiuses>;
-  shadow: string;
+  shadows: {
+    element: string;
+    button: string;
+  };
 };
