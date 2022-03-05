@@ -18,6 +18,7 @@ import {
   Title,
   BorderCountries,
 } from "./styles";
+import { Button } from "../../components/common";
 
 export const getServerSideProps: GetServerSideProps<
   CountryPageProps,
@@ -87,7 +88,7 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
   return (
     <Content>
       <Navigation>
-        <button>Back</button>
+        <Button large>Back</Button>
       </Navigation>
       <Info>
         <Flag src={country.flags.png} />
@@ -100,7 +101,7 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
           <BorderCountries>
             <Label>Border Countries:</Label>
             {country.borders.map((item) => (
-              <button key={item.cca2}>{item.name.common}</button>
+              <Button key={item.cca2}>{item.name.common}</Button>
             ))}
           </BorderCountries>
         </Details>

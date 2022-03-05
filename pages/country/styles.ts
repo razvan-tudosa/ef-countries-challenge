@@ -45,4 +45,8 @@ export const Label = styled.span`
 `;
 export const BorderCountries = styled.div`
   margin-top: ${({ theme }) => theme.sizes.xl};
+
+  button {
+    margin-right: ${({ theme }) => theme.sizes.sm};
+  }
 `;
