@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`  
   main, body {
     padding: 0;
     margin: 0;
@@ -10,12 +10,18 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     font-family: ${({ theme }) => theme.font.family};
+
+    overflow: hidden;
   }
 
   main {
     display: flex;
     justify-content: center;
-    padding-top: 70px; // to compensate for the header that it's fixed
+
+    height: 100vh;
+    width: 100vw;
+
+    overflow-y: scroll;
   }
 
   * {

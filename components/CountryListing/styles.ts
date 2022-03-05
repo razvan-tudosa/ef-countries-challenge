@@ -4,6 +4,8 @@ export const ListingWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: ${({ theme }) => theme.sizes.xl};
+
+  padding-bottom: 100px;
 `;
 
 export const Card = styled.div`

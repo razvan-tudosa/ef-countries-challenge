@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: ${({ theme }) => `${theme.sizes.md} ${theme.sizes.lg}`};
-  position: fixed;
   width: 100vw;
 `;
 
