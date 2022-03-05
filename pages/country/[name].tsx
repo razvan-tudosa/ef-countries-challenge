@@ -20,10 +20,10 @@ import {
 
 export const getServerSideProps: GetServerSideProps<
   CountryPageProps,
-  { code: string }
+  { name: string }
 > = async (context) => {
-  const { code } = context.params as { code: string }; // quick hack to get TS off my back for now
-  const country = await countryService.getOneByCode(code);
+  const { name } = context.params as { name: string }; // quick hack to get TS off my back for now
+  const country = await countryService.getOneByName(name);
 
   return {
     props: {

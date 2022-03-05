@@ -3,7 +3,7 @@ import type { Country } from "./types";
 
 interface CountryServiceI {
   getAll: () => Promise<Country[]>;
-  getOneByCode: (code: string) => Promise<Country>;
+  getOneByName: (name: string) => Promise<Country>;
 }
 
 export class CountryService implements CountryServiceI {
@@ -24,8 +24,8 @@ export class CountryService implements CountryServiceI {
     return response.data;
   }
 
-  async getOneByCode(countryCode: string) {
-    const response = await this.countryApi.get(`/alpha/${countryCode}`);
+  async getOneByName(countryName: string) {
+    const response = await this.countryApi.get(`/name/${countryName}`);
 
     return response.data[0];
   }

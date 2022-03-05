@@ -13,15 +13,15 @@ export const CountryListing: React.FC<CountryListingProps> = ({
 }) => {
   const router = useRouter();
 
-  const handleClickCard = (cca2: string) => () => {
-    router.push(`/country/${cca2}`);
+  const handleClickCard = (name: string) => () => {
+    router.push(`/country/${name}`);
   };
 
   const mappedCountries = countries.map((country) => (
     <CountryCard
       key={country.cca2}
       country={country}
-      onClickCard={handleClickCard(country.cca2)}
+      onClickCard={handleClickCard(country.name.common)}
     />
   ));
 
