@@ -26,7 +26,7 @@ describe("Homepage", () => {
     });
   });
 
-  it.only("should be able to filter by region", () => {
+  it("should be able to filter by region", () => {
     cy.contains("Region").click();
     cy.contains("Europe").click();
 
