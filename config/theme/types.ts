@@ -31,6 +31,13 @@ export const enum Sizes {
   xl = "3rem",
 }
 
+export const enum FontSizes {
+  sm = "0.75rem",
+  md = "1rem",
+  lg = "1.25rem",
+  xl = "1.5rem",
+}
+
 export const enum Radiuses {
   none = "0px",
   sm = "0.125rem" /* 2px */,
@@ -47,6 +54,7 @@ export type Theme = {
   font: {
     family: string;
     weights: Record<keyof typeof FontWeights, FontWeights>;
+    sizes: Record<keyof typeof FontSizes, FontSizes>;
   };
   screens: Record<keyof typeof Screens, Screens>;
   sizes: Record<keyof typeof Sizes, Sizes>;

@@ -7,6 +7,7 @@ import {
   Sizes,
   Themes,
   Radiuses,
+  FontSizes,
 } from "./types";
 
 const colors: ColorsContainer = {
@@ -32,6 +33,12 @@ export const getTheme = (themeType: Themes): Theme => {
         light: FontWeights.light,
         semiBold: FontWeights.semiBold,
         extraBold: FontWeights.extraBold,
+      },
+      sizes: {
+        sm: FontSizes.sm,
+        md: FontSizes.md,
+        lg: FontSizes.lg,
+        xl: FontSizes.xl,
       },
     },
     screens: {
