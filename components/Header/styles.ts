@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding: ${({ theme }) => `${theme.sizes.md} ${theme.sizes.lg}`};
+
   width: 100vw;
 `;
 
@@ -14,10 +14,11 @@ export const Content = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: ${({ theme }) => theme.sizes.lg};
   max-width: ${(props) => props.theme.screens.desktop};
   width: 100%;
 
-  &:first-child {
+  & > div:first-child {
     font-weight: ${({ theme }) => theme.font.weights.extraBold};
     font-size: ${({ theme }) => theme.font.sizes.xl};
   }

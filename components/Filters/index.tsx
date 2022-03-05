@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { Input, Dropdown, Menu, DropdownProps } from "semantic-ui-react";
-import { Search as SearchIcon } from "@styled-icons/material/Search";
+import {
+  Search as SearchIcon,
+  KeyboardArrowDown as ArrowDown,
+} from "@styled-icons/material";
 import { Wrapper } from "./styles";
 import { FiltersContext } from "./FiltersManager";
 
@@ -55,8 +58,10 @@ export const Filters: React.FC = () => {
           text="Fiter by Region"
           options={options}
           onChange={handleChangeRegion}
+          icon={<ArrowDown size={20} />}
           simple
           item
+          openOnFocus
         />
       </Menu>
     </Wrapper>

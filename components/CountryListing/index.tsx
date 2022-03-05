@@ -1,7 +1,5 @@
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
-import { ItemDescription } from "semantic-ui-react";
-import { Searchengin } from "styled-icons/fa-brands";
 import { Country } from "../../services";
 import { FiltersContext } from "../Filters/FiltersManager";
 import { CountryCard } from "./CountryCard";
