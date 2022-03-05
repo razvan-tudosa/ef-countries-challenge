@@ -1,18 +1,23 @@
+import { LanguageDimensions } from "@styled-icons/entypo/Language";
+
 type CountryName = {
   common: string;
   official: string;
   nativeName: {
-    cnr: {
-      common: string;
-      official: string;
-    };
-  };
+    key: string;
+    common: string;
+    official: string;
+  }[];
 };
 
 export type Country = {
   capital: string[];
   cca2: string;
-  currencies: unknown;
+  currencies: {
+    key: string;
+    name: string;
+    symbol: string;
+  }[];
   flags: {
     png: string;
     svg: string;
@@ -21,5 +26,8 @@ export type Country = {
   population: number;
   region: string;
   subregion: string;
-  tld: string; // Top Level Domain
+  topLevelDomain: string;
+  languages: {
+    key: string;
+  }[];
 };
