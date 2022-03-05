@@ -38,9 +38,11 @@ export class CountryService implements CountryServiceI {
 
     delete country.tld;
 
-    const countriesByCodeResponse = await this.getAllByCodes(country.borders);
-
-    country.borders = countriesByCodeResponse;
+    if (country.borders) {
+      country.borders = await this.getAllByCodes(country.borders);
+    } else {
+      country.borders = [];
+    }
 
     return country;
   }

@@ -81,6 +81,10 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
     router.push("/");
   };
 
+  const handleGoToCountryDetails = (countryName: string) => () => {
+    router.push(`/country/${countryName}`);
+  };
+
   const renderColInfo = (info: InfoRow[]) =>
     info.map(({ label, value }: InfoRow) => (
       <Item key={value}>
@@ -106,8 +110,14 @@ const Country: NextPage<CountryPageProps> = ({ country }) => {
           </Row>
           <BorderCountries>
             <Label>Border Countries:</Label>
+            {country.borders.length === 0 && "N/A"}
             {country.borders.map((item) => (
-              <Button key={item.cca2}>{item.name.common}</Button>
+              <Button
+                onClick={handleGoToCountryDetails(item.name.common)}
+                key={item.cca2}
+              >
+                {item.name.common}
+              </Button>
             ))}
           </BorderCountries>
         </Details>
