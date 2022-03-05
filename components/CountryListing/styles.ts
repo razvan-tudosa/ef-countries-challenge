@@ -12,7 +12,7 @@ export const Card = styled.div`
 
   overflow: hidden;
 
-  box-shadow: ${({ theme }) => theme.shadow};
+  box-shadow: ${({ theme }) => theme.shadows.element};
 `;
 
 export const Flag = styled.img`
