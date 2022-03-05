@@ -3,6 +3,7 @@ import { Input, Dropdown, Menu, DropdownProps } from "semantic-ui-react";
 import {
   Search as SearchIcon,
   KeyboardArrowDown as ArrowDown,
+  Close,
 } from "@styled-icons/material";
 import { Wrapper } from "./styles";
 import { FiltersContext } from "./FiltersManager";
@@ -30,7 +31,8 @@ const options: Option[] = [
 ];
 
 export const Filters: React.FC = () => {
-  const { search, setSearch, setSelectedRegion } = useContext(FiltersContext);
+  const { selectedRegion, setSearch, setSelectedRegion } =
+    useContext(FiltersContext);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
@@ -55,10 +57,12 @@ export const Filters: React.FC = () => {
       <Menu compact>
         <Dropdown
           clearable
-          text="Fiter by Region"
+          text="Filter by Region"
           options={options}
           onChange={handleChangeRegion}
-          icon={<ArrowDown size={20} />}
+          icon={
+            !!selectedRegion ? <Close size={20} /> : <ArrowDown size={20} />
+          }
           simple
           item
           openOnFocus

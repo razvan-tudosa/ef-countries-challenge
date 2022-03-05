@@ -11,7 +11,7 @@ export const CountryCard: React.FC<CountryCardProps> = ({
   country,
   onClickCard,
 }) => (
-  <Card onClick={onClickCard}>
+  <Card onClick={onClickCard} id={country.cca2} className="card">
     <Flag src={country.flags.png} />
     <Info>
       <Name>{country.name.common}</Name>
