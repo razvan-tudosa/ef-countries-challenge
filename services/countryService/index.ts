@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosStatic } from "axios";
+import { convertObjToArray } from "../../utils";
 import type { Country } from "./types";
 
 interface CountryServiceI {
@@ -27,7 +28,16 @@ export class CountryService implements CountryServiceI {
   async getOneByName(countryName: string) {
     const response = await this.countryApi.get(`/name/${countryName}`);
 
-    return response.data[0];
+    const country = response.data[0];
+
+    country.name.nativeName = convertObjToArray(country.name.nativeName);
+    country.currencies = convertObjToArray(country.currencies);
+    country.languages = convertObjToArray(country.languages);
+    country.topLevelDomain = country.tld;
+
+    delete country.tld;
+
+    return country;
   }
 }
 
