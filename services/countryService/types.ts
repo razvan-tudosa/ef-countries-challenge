@@ -28,4 +28,5 @@ export type Country = {
   languages: {
     key: string;
   }[];
+  borders: Country[];
 };
