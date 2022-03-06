@@ -4,7 +4,12 @@ export const Wrapper = styled.div`
   padding: ${({ theme }) => theme.sizes.lg} 0;
   margin-bottom: ${({ theme }) => theme.sizes.md};
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    flex-direction: row;
+  }
 
   .input {
     svg {
@@ -44,5 +49,28 @@ export const Wrapper = styled.div`
   .ui.simple.active.dropdown > .menu,
   .ui.simple.dropdown:hover > .menu {
     display: none;
+  }
+
+  .ui.menu {
+    min-width: 175px;
+    .item {
+      width: 100%;
+    }
+  }
+
+  .ui.dropdown {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ui.input {
+    min-width: 300px;
+
+    margin-bottom: ${({ theme }) => theme.sizes.sm};
+  }
+
+  .ui.input,
+  .ui.menu {
+    height: 50px;
   }
 `;
