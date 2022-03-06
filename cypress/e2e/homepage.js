@@ -26,7 +26,7 @@ describe("Homepage", () => {
     });
   });
 
-  it("should be able to filter by region", () => {
+  it("should be able to filter by search and region at the same time", () => {
     cy.contains("Region").click();
     cy.contains("Europe").click();
 
@@ -38,5 +38,11 @@ describe("Homepage", () => {
     cy.contains("Asia").click();
 
     cy.get(".card").should("have.length", 0);
+  });
+
+  it("filtering data with something that does not exists shows a nice message", () => {
+    cy.get("input").type("Definetly Not  a Country");
+
+    cy.contains("No countries found...").should("exist");
   });
 });
