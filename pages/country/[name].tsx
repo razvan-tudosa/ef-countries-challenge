@@ -4,7 +4,7 @@ import { KeyboardBackspace as BackIcon } from "@styled-icons/material/KeyboardBa
 
 import { countryService } from "../../services";
 import type { Country } from "../../services";
-import { Content } from "../styles";
+import { Content } from "../../styles/common";
 import {
   Col,
   Row,
@@ -16,7 +16,7 @@ import {
   Navigation,
   Title,
   BorderCountries,
-} from "./styles";
+} from "../../styles/countryDetails";
 import { Button } from "../../components/common";
 
 export const getServerSideProps: GetServerSideProps<

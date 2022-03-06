@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { NextPage } from "next";
 import { countryService } from "../services";
 import type { Country } from "../services";
-import { Content } from "./styles";
+import { Content } from "../styles/common";
 import { Filters } from "../components/Filters";
 import { CountryListing } from "../components/CountryListing";
 import FiltersManager from "../components/Filters/FiltersManager";
