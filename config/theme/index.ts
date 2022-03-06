@@ -43,6 +43,8 @@ export const getTheme = (themeType: Themes): Theme => {
     },
     screens: {
       mobile: Screens.mobile,
+      tablet: Screens.tablet,
+      laptop: Screens.laptop,
       desktop: Screens.desktop,
     },
     colors: colors[themeType],
