@@ -2,8 +2,20 @@ import styled from "styled-components";
 
 export const ListingWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: ${({ theme }) => theme.sizes.xl};
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.laptop}) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
   padding-bottom: 100px;
 `;
