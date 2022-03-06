@@ -6,8 +6,12 @@ export const Navigation = styled.div`
 
 export const Info = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: calc(${({ theme }) => theme.sizes.xl} * 2);
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const Flag = styled.img`
@@ -48,5 +52,6 @@ export const BorderCountries = styled.div`
 
   button {
     margin-right: ${({ theme }) => theme.sizes.sm};
+    margin-bottom: ${({ theme }) => theme.sizes.sm};
   }
 `;
