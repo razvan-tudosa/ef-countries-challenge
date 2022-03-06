@@ -24,6 +24,12 @@ export const getServerSideProps: GetServerSideProps<
   { name: string }
 > = async (context) => {
   const { name } = context.params as { name: string }; // quick hack to get TS off my back for now
+
+  context.res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=120, stale-while-revalidate=240"
+  );
+
   const country = await countryService.getOneByName(name);
 
   return {
