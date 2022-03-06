@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Input, Dropdown, Menu, DropdownProps } from "semantic-ui-react";
+import { Input, Dropdown, Menu } from "semantic-ui-react";
 import {
   Search as SearchIcon,
   KeyboardArrowDown as ArrowDown,

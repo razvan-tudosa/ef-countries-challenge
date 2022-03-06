@@ -26,7 +26,7 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 ### Components
 
-`components` folder contains all the components needed throughout the app
+`components` folder contains all the components needed throughout the app.
 
 ### Config
 

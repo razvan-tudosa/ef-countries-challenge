@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { NextPage } from "next";
 import { countryService } from "../services";
 import type { Country } from "../services";
