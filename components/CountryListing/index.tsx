@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
+import { Divider } from "semantic-ui-react";
 import { Country } from "../../services";
 import { FiltersContext } from "../Filters/FiltersManager";
 import { CountryCard } from "./CountryCard";
-import { ListingWrapper } from "./styles";
+import { ListingWrapper, NotFoundDisclaimer } from "./styles";
 
 interface CountryListingProps {
   countries: Country[];
@@ -33,6 +34,10 @@ export const CountryListing: React.FC<CountryListingProps> = ({
         onClickCard={handleClickCard(country.name.common)}
       />
     ));
+
+  if (mappedCountries.length === 0) {
+    return <NotFoundDisclaimer>No countries found...</NotFoundDisclaimer>;
+  }
 
   return <ListingWrapper>{mappedCountries}</ListingWrapper>;
 };

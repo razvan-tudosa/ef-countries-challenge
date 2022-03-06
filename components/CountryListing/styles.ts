@@ -49,4 +49,9 @@ export const Label = styled.span`
   margin-right: ${({ theme }) => theme.sizes.xs};
   font-weight: ${({ theme }) => theme.font.weights.semiBold};
 `;
+
 export const DataValue = styled.span``;
+
+export const NotFoundDisclaimer = styled.div`
+  text-align: center;
+`;
