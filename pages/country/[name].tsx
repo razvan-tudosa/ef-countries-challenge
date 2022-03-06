@@ -48,7 +48,6 @@ type Info = {
 };
 
 const Country: NextPage<CountryPageProps> = ({ country }) => {
-  console.log(country);
   const router = useRouter();
 
   const info: Info = {
