@@ -110,6 +110,23 @@ This app has been deployed through [Vercel](https://vercel.com/) and can be seen
 
 If you want to learn more about Deploying with Vercel check out [Next.js deployment documentation](https://nextjs.org/docs/deployment).
 
+## Todo
+
+Stuff I wish I would do in the future:
+
+- [ ] Install & Setup Jest and React Testing Library
+- [ ] Write some Unit Tests:
+  - [ ] Utils > `convertObjToArray`
+  - [ ] UI unit tests with React Testing Library for ThemePicker, Filters, Listing at least
+  - [ ] CountryService
+- [ ] Improve Performance:
+  - [ ] A cache layer would be nice for Axios
+  - [ ] Investigate a possible [SWR](https://swr.vercel.app/docs/with-nextjs) integration that might also help with caching
+  - [ ] Investigate the possibility of statically generating the pages.
+    - Since Next.js supports SSG and there are a finite number of countries we could generate all the pages at build time (one drawback being the build taking a lot more time) and maybe also play with revalidation mechanism that Next offers so that we have up to date data in case it could change
+    - this would increase loading times for clients and we wouldn't need to request data everytime a client asks to see the listing or a specific country
+- [ ] Improve UX by adding some loading spinners, placeholders while the data loads etc.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
